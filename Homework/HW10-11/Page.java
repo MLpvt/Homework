@@ -23,12 +23,13 @@ public class Page {
 
 	public void replace(Button oldButton, Button newButton) {
 		for (int i = 0; i < buttons.size(); i++) {
-			if (buttons.get(i).equals(newButton)) {
+			if (buttons.get(i).equals(oldButton)) {
 				buttons.set(i, newButton);
 			}
 		}
 
 	}
+
 	public void printButtons() {
 		Iterator<Button> iterator = buttons.iterator();
 		while (iterator.hasNext()) {
@@ -46,11 +47,12 @@ public class Page {
 
 	public void replace(Field oldField, Field newField) {
 		for (int i = 0; i < fields.size(); i++) {
-			if (fields.get(i).equals(newField)) {
+			if (fields.get(i).equals(oldField)) {
 				fields.set(i, newField);
 			}
 		}
 	}
+
 	public void printFields() {
 		Iterator<Field> iterator = fields.iterator();
 		while (iterator.hasNext()) {
@@ -71,6 +73,7 @@ public class Page {
 			labels.add(newLabel);
 		}
 	}
+
 	public void printLabels() {
 		Iterator<Label> iterator = labels.iterator();
 		while (iterator.hasNext()) {
@@ -89,6 +92,7 @@ public class Page {
 	public void replace(int key, Dropdown oldDropdown, Dropdown newDropdown) {
 		dropdowns.replace(key, oldDropdown, newDropdown);
 	}
+
 	public void printDropdowns() {
 		Iterator<Dropdown> iterator = dropdowns.values().iterator();
 		while (iterator.hasNext()) {
